@@ -1,31 +1,38 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from  './pages/Home';
+import Home from './pages/Home';
 import About from './pages/About';
-import Qualifications from './pages/Qualifications';
 import Skills from './pages/Skills';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/qualifications" element={<Qualifications />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <ScrollToTop />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <main className="main-content">
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="portfolio">
+          <Portfolio />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      <Footer />
+      <ScrollToTop />
+    </div>
   );
 };
 

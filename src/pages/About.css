@@ -1,5 +1,6 @@
 .about {
   background-color: white;
+  padding-top: 0;
 }
 
 .about-content {
@@ -16,6 +17,14 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #e0e0e0;
+}
+
+.about-img img {
+  width: 350px;
+  height: 460px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about-boxes {
