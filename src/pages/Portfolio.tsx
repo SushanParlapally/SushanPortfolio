@@ -82,7 +82,7 @@ const Portfolio: React.FC = () => {
                 )}
                 {project.liveLink && project.liveLink !== '#' && (
                   <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="portfolio-link">
-                    <ExternalLinkIcon /> Live Site
+                    <ExternalLinkIcon /> Visit Live Site
                   </a>
                 )}
               </div>
