@@ -10,6 +10,7 @@ interface Project {
   icon: React.ReactNode;
   technologies: string[];
   githubLink?: string;
+  githubBackendLink?: string;
   liveLink?: string;
 }
 
@@ -26,8 +27,9 @@ const Portfolio: React.FC = () => {
       description: 'Workflow automation app - Built a travel-request system with ASP.NET Core MVC, React, Bootstrap, and SQL Server, cutting processing time 60% for 500+ users.',
       icon: <CloudIcon />,
       technologies: ['ASP.NET Core', 'React', 'Bootstrap', 'SQL Server'],
-      githubLink: '#',
-      liveLink: '#'
+      githubLink: 'https://github.com/SushanParlapally/Trawells-F',
+      githubBackendLink: 'https://github.com/SushanParlapally/Trawells',
+      liveLink: 'https://trawells.netlify.app/'
     },
     {
       id: 2,
@@ -70,12 +72,17 @@ const Portfolio: React.FC = () => {
               <div className="portfolio-links">
                 {project.githubLink && (
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="portfolio-link">
-                    <GithubIcon /> GitHub
+                    <GithubIcon /> {project.githubBackendLink ? 'Frontend' : 'GitHub'}
                   </a>
                 )}
-                {project.liveLink && (
+                {project.githubBackendLink && (
+                  <a href={project.githubBackendLink} target="_blank" rel="noopener noreferrer" className="portfolio-link">
+                    <GithubIcon /> Backend
+                  </a>
+                )}
+                {project.liveLink && project.liveLink !== '#' && (
                   <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="portfolio-link">
-                    <ExternalLinkIcon /> View More →
+                    <ExternalLinkIcon /> Live Site
                   </a>
                 )}
               </div>

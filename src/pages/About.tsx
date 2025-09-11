@@ -58,7 +58,7 @@ const About: React.FC = () => {
 
             <p className="about-description">
               Hi Everyone! My name is Sushan Parlapally. I am a Full Stack Developer
-              and final-year B.Tech CS student with 6 months building and debugging C#,
+              B.Tech CS student with 6 months building and debugging C#,
               .NET 8.0, ASP.NET Core, React, TypeScript, and SQL Server solutions.
               I enjoy utilizing logic and code to give shape to my new innovative ideas.
               Currently I am working on React.js and making beautiful UI-UX designs and websites.
